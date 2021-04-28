@@ -1,36 +1,29 @@
 
 package br.com.mp.quarkusmovie.restclient.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
+import javax.json.bind.annotation.JsonbProperty;
 
 public class DescriptionIMDB {
 
-    @JsonProperty("i")
     private ImageIMDB imageIMDB;
 
-    @JsonProperty("id")
     private String idImdb;
 
-    @JsonProperty("l")
     private String longName;
 
-    @JsonProperty("q")
     private String qualifier;
 
     private Long rank;
 
-    @JsonProperty("s")
     private String staff;
 
-    @JsonProperty("y")
     private Long year;
-
 
     public ImageIMDB getImage() {
         return imageIMDB;
     }
 
+    @JsonbProperty("i")
     public void setImage(ImageIMDB imageIMDB) {
         this.imageIMDB = imageIMDB;
     }
@@ -39,6 +32,7 @@ public class DescriptionIMDB {
         return idImdb;
     }
 
+    @JsonbProperty("id")
     public void setIdImdb(String idImdb) {
         this.idImdb = idImdb;
     }
@@ -47,6 +41,7 @@ public class DescriptionIMDB {
         return longName;
     }
 
+    @JsonbProperty("l")
     public void setLongName(String longName) {
         this.longName = longName;
     }
@@ -55,6 +50,7 @@ public class DescriptionIMDB {
         return qualifier;
     }
 
+    @JsonbProperty("q")
     public void setQualifier(String qualifier) {
         this.qualifier = qualifier;
     }
@@ -71,6 +67,7 @@ public class DescriptionIMDB {
         return staff;
     }
 
+    @JsonbProperty("s")
     public void setStaff(String staff) {
         this.staff = staff;
     }
@@ -79,6 +76,7 @@ public class DescriptionIMDB {
         return year;
     }
 
+    @JsonbProperty("y")
     public void setYear(Long year) {
         this.year = year;
     }
